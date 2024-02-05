@@ -1,0 +1,36 @@
+/* Estilos generales para pantallas más grandes */
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(26, 24, 24);
+  color: bisque;
+  padding: 1rem 3rem; /* Añade un relleno al encabezado */
+}
+
+.sections {
+  display: flex;
+  gap: 3rem;
+  margin-right: 3rem;
+}
+
+.home {
+  margin-left: 3rem;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width:500px) and (min-width:300px) {
+  
+
+  .home {
+    
+    color:aquamarine;
+  }
+
+
+}
