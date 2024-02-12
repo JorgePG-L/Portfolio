@@ -89,3 +89,26 @@ body {
   justify-content: center;
   text-align: center;
 }
+
+
+.skillbox{
+  background-color: rgb(20, 20, 20);
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 5px 0px rgba(66,18,66,0.31);
+
+
+}
+
+.skill-title{
+  margin:1.5rem;
+}
+.skill-icon{
+  margin:1.5rem;
+}

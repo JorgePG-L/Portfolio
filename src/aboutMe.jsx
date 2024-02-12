@@ -1,5 +1,5 @@
 import React from 'react';
-import image_01 from '../public/Jorge_Pose.png'
+import image_01 from './assets/Jorge_Pose.png'
 import './App.css'
 
 function AboutMe() {
