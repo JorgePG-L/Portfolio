@@ -13,6 +13,9 @@ function Skills() {
                 </p>
             <div className='skill-boxes' >
                 <SkillBox  title = "Web development" icon = 'icono1'  />
+                <SkillBox  title = "Web development" icon = 'icono1'  />
+                <SkillBox  title = "Web development" icon = 'icono1'  />
+                <SkillBox  title = "Web development" icon = 'icono1'  />
             </div>
             </div>
             
