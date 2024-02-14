@@ -124,12 +124,13 @@ body {
 .projects {
   display: flex;
   background-color: rgb(20, 20, 20);
+  justify-content: center; 
 
 }
 .projects-content{
   display: flex; 
   align-items: center; 
-  justify-content: center; 
+  
   flex-direction: column;
   text-align: center;
   color: #ffe4c4;
@@ -140,4 +141,49 @@ body {
 .projects-content h1 {
   margin: 1rem;
   text-align: center;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.projects-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
