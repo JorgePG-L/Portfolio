@@ -4,7 +4,10 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  
+  
+  
   const handleCardClick = (project) => {
     setSelectedProject(project);
     setModalOpen(true);
@@ -19,27 +22,36 @@ const Projects = () => {
       description: "Descripción del proyecto 1.",
       imageUrl: "ruta/a/la/imagen1.jpg",
       url: "https://url-del-proyecto1.com",
+      category: "category1",
     },
     {
       title: "Proyecto 2",
       description: "Descripción del proyecto 2.",
       imageUrl: "ruta/a/la/imagen2.jpg",
       url: "https://url-del-proyecto2.com",
+      category: "category2",
     },
     {
       title: "Proyecto 3",
       description: "Descripción del proyecto 2.",
       imageUrl: "ruta/a/la/imagen2.jpg",
       url: "https://url-del-proyecto2.com",
+      category: "category1",
     },
     {
       title: "Proyecto 4",
       description: "Descripción del proyecto 2.",
       imageUrl: "ruta/a/la/imagen2.jpg",
       url: "https://url-del-proyecto2.com",
+      category: "category1",
     },
-    
+   
   ];
+  const changeCategory = (category) => {
+    setSelectedCategory(category);
+  };
+    const filteredProjects = selectedCategory === "all" ? projectsData : projectsData.filter(project => project.category === selectedCategory);
+ 
   return (
     <div className="projects">
       <div className="projects-content">
@@ -49,9 +61,14 @@ const Projects = () => {
           Estos son los últimos proyectos en los que he trabajdo o sigo
           trabajando.
         </p>
-
+        <div className="category-buttons">
+          <button onClick={() => changeCategory("all")}>Todos</button>
+          <button onClick={() => changeCategory("category1")}>Categoría 1</button>
+          <button onClick={() => changeCategory("category2")}>Categoría 2</button>
+          {/* Agrega más botones para otras categorías según sea necesario */}
+        </div>
         <div className="projects-links">
-          {projectsData.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <ProjectCard
               key={index}
               project={project}

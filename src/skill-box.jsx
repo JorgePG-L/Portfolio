@@ -4,8 +4,9 @@ function SkillBox( {icon, title}) {
     return ( 
         <div className="skillbox" >
             
-            <div className='skill-icon'>{icon}</div>
+            <div className='skill-icon'><i className={icon}  ></i></div>
             <div className='skill-title'>{title}</div>
+            
         </div>
      );
 }
